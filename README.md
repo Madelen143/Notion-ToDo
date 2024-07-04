@@ -11,3 +11,8 @@ created a package.json file using "npm init"
 
 installed @notionhq/client by running "npm install @notionhq/client --save" 
 	"--save" flag saves the package as dependency in package.json file
+
+Could not access env vars so added require line in ToDo.js
+ran "npm install dotenv --save" to save as dependency
+
+Notion Page iD = 32 characters after "www.notion.so/"
