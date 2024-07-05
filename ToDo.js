@@ -8,17 +8,42 @@ const { Client } = require('@notionhq/client');
 const notion = new Client({ auth: process.env.NOTION_KEY });
 
 // Returns db object, describes structure and cols of db
-(async () => {
-  const databaseId = process.env.NOTION_PAGE_ID;
-  const response = await notion.databases.retrieve({ database_id: databaseId });
-  // console.log(response);
-})();
+// (async () => {
+//   const databaseId = process.env.NOTION_PAGE_ID;
+//   const response = await notion.databases.retrieve({ database_id: databaseId });
+//   console.log(response);
+// })();
 
 // Queries a db, returns rows as objects
+// (async () => {
+//   const databaseId = process.env.NOTION_PAGE_ID;
+//   const response = await notion.databases.query({
+//     database_id: databaseId,
+//   });
+//   console.log(response);
+// })();
+
+// Adds entry to database
+// create() needs 2 args: parent (id of page/db) and properties (values of entry)
+// properties must match structure of table
 (async () => {
-  const databaseId = process.env.NOTION_PAGE_ID;
-  const response = await notion.databases.query({
-    database_id: databaseId,
+  const response = await notion.pages.create({
+    parent: {
+      database_id: process.env.NOTION_PAGE_ID,
+    },
+    properties: {
+      'Name': {
+        type: 'title',
+        title: [
+          {
+            type: 'text',
+            text: {
+              content: 'Wash Blanket',
+            },
+          },
+        ],
+      },
+    },
   });
   console.log(response);
 })();
