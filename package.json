@@ -1,0 +1,15 @@
+{
+  "name": "notion-todo",
+  "version": "1.0.0",
+  "description": "Internal Notion integration to automate adding entries to ToDo database",
+  "main": "ToDo.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Madelen Flores",
+  "license": "ISC",
+  "dependencies": {
+    "@notionhq/client": "^2.2.15",
+    "dotenv": "^16.4.5"
+  }
+}
