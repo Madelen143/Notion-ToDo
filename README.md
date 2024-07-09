@@ -1,6 +1,7 @@
 # Notion-ToDo
 Using Notion's API to automate a daily ToDo list with tasks.
 
+Notes:
 Created ToDo.js file
 installed Node.js to be able to run JS
 
@@ -15,4 +16,4 @@ installed @notionhq/client by running "npm install @notionhq/client --save"
 Could not access env vars so added require line in ToDo.js
 ran "npm install dotenv --save" to save as dependency
 
-Notion Page iD = 32 characters after "www.notion.so/"
+Notion Page ID = 32 characters after "www.notion.so/"
