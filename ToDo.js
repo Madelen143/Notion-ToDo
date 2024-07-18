@@ -32,17 +32,23 @@ const notion = new Client({ auth: process.env.NOTION_KEY });
       database_id: process.env.NOTION_PAGE_ID,
     },
     properties: {
-      'Name': {
+      'Task': {
         type: 'title',
         title: [
           {
             type: 'text',
             text: {
-              content: 'Wash Blanket',
+              content: 'Clean asdHouse',
             },
           },
         ],
       },
+      'Level' : {
+        'select' : { 'name' : 'Silent Princess' }
+      },
+      'Status' : {
+        'checkbox' : false
+      }
     },
   });
   console.log(response);

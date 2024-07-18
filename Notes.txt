@@ -1,0 +1,43 @@
+Git Usage Notes:
+
+Rebase:
+    updating branch to reflect most recent main branch
+    git fetch origin
+    git rebase <branch-name>
+
+Check Status:
+    check all changes made such as modified files and new/deleted files
+    git status
+
+Switch Branch:
+    switch to another branch
+    (optional) git fetch origin
+    git checkout <branch-name>
+
+Create Branch
+    create new remote branch
+    git branch (or -b) <branch-name>
+
+Notes:
+Created ToDo.js file
+installed Node.js to be able to run JS
+
+ToDo file did not run since did not have @notionhq/client package installed
+
+created a package.json file using "npm init"
+	package.json file has info on project like version number, packages needed and author
+
+installed @notionhq/client by running "npm install @notionhq/client --save" 
+	"--save" flag saves the package as dependency in package.json file
+
+Could not access env vars so added require line in ToDo.js
+ran "npm install dotenv --save" to save as dependency
+
+Notion Page ID = 32 characters after "www.notion.so/"
+When query db, get response back for Status col
+  	Status: { id: 'rMdI', name: 'Status', type: 'checkbox', checkbox: {} }
+But to create filed in js async call:
+	'Status' : {'checkbox' : false}
+
+Refer to https://developers.notion.com/reference/page-property-values
+to see how to format entries
